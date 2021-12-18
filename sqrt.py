@@ -1,3 +1,4 @@
+#https://leetcode.com/submissions/detail/603670820/
 class Solution:
     def mySqrt(self, x: int) -> int:
         if x == 1:
