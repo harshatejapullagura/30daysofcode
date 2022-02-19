@@ -1,0 +1,20 @@
+# For brute force you can just loop through by keeping the size length to k and for every loop you can increase one digit and calculate the sum O(n * K)
+#optimized approach would a sliding window problem where you keep track of sum of and minus ith index and adding the next Kth 1 index bringd o(n)
+
+class Solution:
+    def lengthOfLongestSubstring(self,Array,K):
+        ws, wsum = 0,0.0
+        new = []
+        for i in range(len(Array)):
+            wsum += Array[i]
+            if i >= K-1:
+                new.append((wsum/K))
+                wsum -= Array[ws]
+                ws += 1
+        return new
+
+
+sl = Solution()
+Array = [1, 3, 2, 6, -1, 4, 1, 8, 2]
+K=5
+print(sl.lengthOfLongestSubstring(Array, K))
