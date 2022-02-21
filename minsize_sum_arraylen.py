@@ -5,7 +5,6 @@ class Solution:
         w_start = 0
         currenlen = math.inf
         for i in range(len(nums)):
-
             summm += nums[i]
             while summm >= target:
                 max_sum = i - w_start + 1
